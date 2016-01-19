@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F8BEE1C913DD7204D73A819 /* libPods-Juma BLE Helper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606A645A92B05AFE3B7B43E9 /* libPods-Juma BLE Helper.a */; };
+		D41847911C1587BC00C5460D /* SendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D418478F1C1587BC00C5460D /* SendCell.m */; };
+		D41847981C167B0600C5460D /* JumaDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D41847971C167B0600C5460D /* JumaDataModel.m */; };
+		D418479B1C16D2FB00C5460D /* HexadecimalTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D418479A1C16D2FB00C5460D /* HexadecimalTextField.m */; };
+		D41847A71C18240700C5460D /* ReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41847A51C18240700C5460D /* ReceiveViewController.m */; };
+		D41847A81C18240700C5460D /* ReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41847A61C18240700C5460D /* ReceiveViewController.xib */; };
+		D41847AE1C192F9000C5460D /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41847AC1C192F9000C5460D /* SendViewController.m */; };
+		D41847AF1C192F9000C5460D /* SendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41847AD1C192F9000C5460D /* SendViewController.xib */; };
+		D41847B21C194C6000C5460D /* ReceiveHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D41847B11C194C6000C5460D /* ReceiveHUD.m */; };
+		D4839A591C1522640062E6FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839A581C1522640062E6FF /* main.m */; };
+		D4839A5C1C1522640062E6FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839A5B1C1522640062E6FF /* AppDelegate.m */; };
+		D4839A621C1522640062E6FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4839A601C1522640062E6FF /* Main.storyboard */; };
+		D4839A641C1522640062E6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4839A631C1522640062E6FF /* Assets.xcassets */; };
+		D4839A671C1522640062E6FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4839A651C1522640062E6FF /* LaunchScreen.storyboard */; };
+		D4839A721C1522640062E6FF /* Juma_BLE_HelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839A711C1522640062E6FF /* Juma_BLE_HelperTests.m */; };
+		D4839A7D1C1522640062E6FF /* Juma_BLE_HelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839A7C1C1522640062E6FF /* Juma_BLE_HelperUITests.m */; };
+		D4839A8B1C1523E60062E6FF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4839A8A1C1523E60062E6FF /* CoreBluetooth.framework */; };
+		D4839A901C15280F0062E6FF /* JumaBluetoothSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4839A8F1C15280F0062E6FF /* JumaBluetoothSDK.framework */; };
+		D4839A941C1528EF0062E6FF /* ScannedDevicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839A931C1528EF0062E6FF /* ScannedDevicesTableViewController.m */; };
+		D4839A971C1529150062E6FF /* ScannedDevicesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839A961C1529150062E6FF /* ScannedDevicesCell.m */; };
+		D4839ABA1C1535A50062E6FF /* NSArray+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839A9C1C1535A50062E6FF /* NSArray+Block.m */; };
+		D4839ABF1C1535A50062E6FF /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839AA61C1535A50062E6FF /* NSString+Category.m */; };
+		D4839AC01C1535A50062E6FF /* NSTimer+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839AA81C1535A50062E6FF /* NSTimer+Category.m */; };
+		D4839AC51C1535A50062E6FF /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839AB31C1535A50062E6FF /* UIColor+Category.m */; };
+		D4839AC81C1535A50062E6FF /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839AB91C1535A50062E6FF /* UIViewController+Category.m */; };
+		D4F95F851C1ECD8A007E910F /* SendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F95F831C1ECD8A007E910F /* SendTableViewController.m */; };
+		D4F95F861C1ECD8A007E910F /* SendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F95F841C1ECD8A007E910F /* SendTableViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4839A6E1C1522640062E6FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4839A4C1C1522640062E6FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4839A531C1522640062E6FF;
+			remoteInfo = "Juma BLE Helper";
+		};
+		D4839A791C1522640062E6FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4839A4C1C1522640062E6FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4839A531C1522640062E6FF;
+			remoteInfo = "Juma BLE Helper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		606A645A92B05AFE3B7B43E9 /* libPods-Juma BLE Helper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Juma BLE Helper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		955AF330F539F25FA7983AB3 /* Pods-Juma BLE Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juma BLE Helper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Juma BLE Helper/Pods-Juma BLE Helper.release.xcconfig"; sourceTree = "<group>"; };
+		A87A72AD03A7BFEB8475AA5B /* Pods-Juma BLE Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juma BLE Helper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Juma BLE Helper/Pods-Juma BLE Helper.debug.xcconfig"; sourceTree = "<group>"; };
+		D418478E1C1587BC00C5460D /* SendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCell.h; sourceTree = "<group>"; };
+		D418478F1C1587BC00C5460D /* SendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCell.m; sourceTree = "<group>"; };
+		D41847961C167B0600C5460D /* JumaDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumaDataModel.h; sourceTree = "<group>"; };
+		D41847971C167B0600C5460D /* JumaDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumaDataModel.m; sourceTree = "<group>"; };
+		D41847991C16D2FB00C5460D /* HexadecimalTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexadecimalTextField.h; sourceTree = "<group>"; };
+		D418479A1C16D2FB00C5460D /* HexadecimalTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexadecimalTextField.m; sourceTree = "<group>"; };
+		D41847A41C18240700C5460D /* ReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveViewController.h; sourceTree = "<group>"; };
+		D41847A51C18240700C5460D /* ReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveViewController.m; sourceTree = "<group>"; };
+		D41847A61C18240700C5460D /* ReceiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiveViewController.xib; sourceTree = "<group>"; };
+		D41847AB1C192F9000C5460D /* SendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
+		D41847AC1C192F9000C5460D /* SendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
+		D41847AD1C192F9000C5460D /* SendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendViewController.xib; sourceTree = "<group>"; };
+		D41847B01C194C6000C5460D /* ReceiveHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveHUD.h; sourceTree = "<group>"; };
+		D41847B11C194C6000C5460D /* ReceiveHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveHUD.m; sourceTree = "<group>"; };
+		D4839A541C1522640062E6FF /* Juma BLE Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Juma BLE Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4839A581C1522640062E6FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4839A5A1C1522640062E6FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D4839A5B1C1522640062E6FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4839A611C1522640062E6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4839A631C1522640062E6FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4839A661C1522640062E6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4839A681C1522640062E6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4839A6D1C1522640062E6FF /* Juma BLE HelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Juma BLE HelperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4839A711C1522640062E6FF /* Juma_BLE_HelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Juma_BLE_HelperTests.m; sourceTree = "<group>"; };
+		D4839A731C1522640062E6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4839A781C1522640062E6FF /* Juma BLE HelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Juma BLE HelperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4839A7C1C1522640062E6FF /* Juma_BLE_HelperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Juma_BLE_HelperUITests.m; sourceTree = "<group>"; };
+		D4839A7E1C1522640062E6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4839A8A1C1523E60062E6FF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D4839A8F1C15280F0062E6FF /* JumaBluetoothSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JumaBluetoothSDK.framework; sourceTree = "<group>"; };
+		D4839A921C1528EF0062E6FF /* ScannedDevicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannedDevicesTableViewController.h; sourceTree = "<group>"; };
+		D4839A931C1528EF0062E6FF /* ScannedDevicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannedDevicesTableViewController.m; sourceTree = "<group>"; };
+		D4839A951C1529150062E6FF /* ScannedDevicesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannedDevicesCell.h; sourceTree = "<group>"; };
+		D4839A961C1529150062E6FF /* ScannedDevicesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannedDevicesCell.m; sourceTree = "<group>"; };
+		D4839A981C152F760062E6FF /* JumaConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JumaConfig.h; sourceTree = "<group>"; };
+		D4839A9B1C1535A50062E6FF /* NSArray+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Block.h"; sourceTree = "<group>"; };
+		D4839A9C1C1535A50062E6FF /* NSArray+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Block.m"; sourceTree = "<group>"; };
+		D4839AA51C1535A50062E6FF /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		D4839AA61C1535A50062E6FF /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		D4839AA71C1535A50062E6FF /* NSTimer+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Category.h"; sourceTree = "<group>"; };
+		D4839AA81C1535A50062E6FF /* NSTimer+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Category.m"; sourceTree = "<group>"; };
+		D4839AB21C1535A50062E6FF /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		D4839AB31C1535A50062E6FF /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
+		D4839AB81C1535A50062E6FF /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
+		D4839AB91C1535A50062E6FF /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
+		D4F95F821C1ECD8A007E910F /* SendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendTableViewController.h; sourceTree = "<group>"; };
+		D4F95F831C1ECD8A007E910F /* SendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendTableViewController.m; sourceTree = "<group>"; };
+		D4F95F841C1ECD8A007E910F /* SendTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendTableViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4839A511C1522640062E6FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4839A8B1C1523E60062E6FF /* CoreBluetooth.framework in Frameworks */,
+				8F8BEE1C913DD7204D73A819 /* libPods-Juma BLE Helper.a in Frameworks */,
+				D4839A901C15280F0062E6FF /* JumaBluetoothSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4839A6A1C1522640062E6FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4839A751C1522640062E6FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28A6637C9F8EA216481FB9D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A87A72AD03A7BFEB8475AA5B /* Pods-Juma BLE Helper.debug.xcconfig */,
+				955AF330F539F25FA7983AB3 /* Pods-Juma BLE Helper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF175A487838895929B372EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4839A8F1C15280F0062E6FF /* JumaBluetoothSDK.framework */,
+				D4839A8A1C1523E60062E6FF /* CoreBluetooth.framework */,
+				606A645A92B05AFE3B7B43E9 /* libPods-Juma BLE Helper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D418479F1C1801A200C5460D /* Receive */ = {
+			isa = PBXGroup;
+			children = (
+				D41847A41C18240700C5460D /* ReceiveViewController.h */,
+				D41847A51C18240700C5460D /* ReceiveViewController.m */,
+				D41847A61C18240700C5460D /* ReceiveViewController.xib */,
+			);
+			name = Receive;
+			sourceTree = "<group>";
+		};
+		D41847A31C18043A00C5460D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D41847961C167B0600C5460D /* JumaDataModel.h */,
+				D41847971C167B0600C5460D /* JumaDataModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		D4839A4B1C1522640062E6FF = {
+			isa = PBXGroup;
+			children = (
+				D4839A561C1522640062E6FF /* Juma BLE Helper */,
+				D4839A701C1522640062E6FF /* Juma BLE HelperTests */,
+				D4839A7B1C1522640062E6FF /* Juma BLE HelperUITests */,
+				D4839A551C1522640062E6FF /* Products */,
+				28A6637C9F8EA216481FB9D2 /* Pods */,
+				CF175A487838895929B372EA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4839A551C1522640062E6FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4839A541C1522640062E6FF /* Juma BLE Helper.app */,
+				D4839A6D1C1522640062E6FF /* Juma BLE HelperTests.xctest */,
+				D4839A781C1522640062E6FF /* Juma BLE HelperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4839A561C1522640062E6FF /* Juma BLE Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D4839A991C1535A50062E6FF /* Categories */,
+				D4839A5A1C1522640062E6FF /* AppDelegate.h */,
+				D4839A5B1C1522640062E6FF /* AppDelegate.m */,
+				D4839A601C1522640062E6FF /* Main.storyboard */,
+				D4839A911C1528270062E6FF /* Scanned Devices */,
+				D4839AC91C1563580062E6FF /* Send Data */,
+				D418479F1C1801A200C5460D /* Receive */,
+				D4839A631C1522640062E6FF /* Assets.xcassets */,
+				D4839A651C1522640062E6FF /* LaunchScreen.storyboard */,
+				D4839A681C1522640062E6FF /* Info.plist */,
+				D4839A571C1522640062E6FF /* Supporting Files */,
+			);
+			path = "Juma BLE Helper";
+			sourceTree = "<group>";
+		};
+		D4839A571C1522640062E6FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4839A981C152F760062E6FF /* JumaConfig.h */,
+				D4839A581C1522640062E6FF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4839A701C1522640062E6FF /* Juma BLE HelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4839A711C1522640062E6FF /* Juma_BLE_HelperTests.m */,
+				D4839A731C1522640062E6FF /* Info.plist */,
+			);
+			path = "Juma BLE HelperTests";
+			sourceTree = "<group>";
+		};
+		D4839A7B1C1522640062E6FF /* Juma BLE HelperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4839A7C1C1522640062E6FF /* Juma_BLE_HelperUITests.m */,
+				D4839A7E1C1522640062E6FF /* Info.plist */,
+			);
+			path = "Juma BLE HelperUITests";
+			sourceTree = "<group>";
+		};
+		D4839A911C1528270062E6FF /* Scanned Devices */ = {
+			isa = PBXGroup;
+			children = (
+				D4839A921C1528EF0062E6FF /* ScannedDevicesTableViewController.h */,
+				D4839A931C1528EF0062E6FF /* ScannedDevicesTableViewController.m */,
+				D4839A951C1529150062E6FF /* ScannedDevicesCell.h */,
+				D4839A961C1529150062E6FF /* ScannedDevicesCell.m */,
+			);
+			name = "Scanned Devices";
+			sourceTree = "<group>";
+		};
+		D4839A991C1535A50062E6FF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D4839A9A1C1535A50062E6FF /* Foundation */,
+				D4839AAB1C1535A50062E6FF /* UIKit */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		D4839A9A1C1535A50062E6FF /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				D4839A9B1C1535A50062E6FF /* NSArray+Block.h */,
+				D4839A9C1C1535A50062E6FF /* NSArray+Block.m */,
+				D4839AA51C1535A50062E6FF /* NSString+Category.h */,
+				D4839AA61C1535A50062E6FF /* NSString+Category.m */,
+				D4839AA71C1535A50062E6FF /* NSTimer+Category.h */,
+				D4839AA81C1535A50062E6FF /* NSTimer+Category.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		D4839AAB1C1535A50062E6FF /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D4839AB21C1535A50062E6FF /* UIColor+Category.h */,
+				D4839AB31C1535A50062E6FF /* UIColor+Category.m */,
+				D4839AB81C1535A50062E6FF /* UIViewController+Category.h */,
+				D4839AB91C1535A50062E6FF /* UIViewController+Category.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D4839AC91C1563580062E6FF /* Send Data */ = {
+			isa = PBXGroup;
+			children = (
+				D41847A31C18043A00C5460D /* model */,
+				D41847AB1C192F9000C5460D /* SendViewController.h */,
+				D41847AC1C192F9000C5460D /* SendViewController.m */,
+				D41847AD1C192F9000C5460D /* SendViewController.xib */,
+				D4F95F821C1ECD8A007E910F /* SendTableViewController.h */,
+				D4F95F831C1ECD8A007E910F /* SendTableViewController.m */,
+				D4F95F841C1ECD8A007E910F /* SendTableViewController.xib */,
+				D418478E1C1587BC00C5460D /* SendCell.h */,
+				D418478F1C1587BC00C5460D /* SendCell.m */,
+				D41847991C16D2FB00C5460D /* HexadecimalTextField.h */,
+				D418479A1C16D2FB00C5460D /* HexadecimalTextField.m */,
+				D41847B01C194C6000C5460D /* ReceiveHUD.h */,
+				D41847B11C194C6000C5460D /* ReceiveHUD.m */,
+			);
+			name = "Send Data";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4839A531C1522640062E6FF /* Juma BLE Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4839A811C1522640062E6FF /* Build configuration list for PBXNativeTarget "Juma BLE Helper" */;
+			buildPhases = (
+				7E614BA3CAD0CB0BFE4C0DC4 /* Check Pods Manifest.lock */,
+				D4839A501C1522640062E6FF /* Sources */,
+				D4839A511C1522640062E6FF /* Frameworks */,
+				D4839A521C1522640062E6FF /* Resources */,
+				8F269919C61F2BADD69A09F2 /* Embed Pods Frameworks */,
+				B65D620CB75AD18B26EEE92B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Juma BLE Helper";
+			productName = "Juma BLE Helper";
+			productReference = D4839A541C1522640062E6FF /* Juma BLE Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4839A6C1C1522640062E6FF /* Juma BLE HelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4839A841C1522640062E6FF /* Build configuration list for PBXNativeTarget "Juma BLE HelperTests" */;
+			buildPhases = (
+				D4839A691C1522640062E6FF /* Sources */,
+				D4839A6A1C1522640062E6FF /* Frameworks */,
+				D4839A6B1C1522640062E6FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4839A6F1C1522640062E6FF /* PBXTargetDependency */,
+			);
+			name = "Juma BLE HelperTests";
+			productName = "Juma BLE HelperTests";
+			productReference = D4839A6D1C1522640062E6FF /* Juma BLE HelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4839A771C1522640062E6FF /* Juma BLE HelperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4839A871C1522640062E6FF /* Build configuration list for PBXNativeTarget "Juma BLE HelperUITests" */;
+			buildPhases = (
+				D4839A741C1522640062E6FF /* Sources */,
+				D4839A751C1522640062E6FF /* Frameworks */,
+				D4839A761C1522640062E6FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4839A7A1C1522640062E6FF /* PBXTargetDependency */,
+			);
+			name = "Juma BLE HelperUITests";
+			productName = "Juma BLE HelperUITests";
+			productReference = D4839A781C1522640062E6FF /* Juma BLE HelperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4839A4C1C1522640062E6FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = JUMA;
+				TargetAttributes = {
+					D4839A531C1522640062E6FF = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = X58N745X9P;
+					};
+					D4839A6C1C1522640062E6FF = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = D4839A531C1522640062E6FF;
+					};
+					D4839A771C1522640062E6FF = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = D4839A531C1522640062E6FF;
+					};
+				};
+			};
+			buildConfigurationList = D4839A4F1C1522640062E6FF /* Build configuration list for PBXProject "Juma BLE Helper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4839A4B1C1522640062E6FF;
+			productRefGroup = D4839A551C1522640062E6FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4839A531C1522640062E6FF /* Juma BLE Helper */,
+				D4839A6C1C1522640062E6FF /* Juma BLE HelperTests */,
+				D4839A771C1522640062E6FF /* Juma BLE HelperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4839A521C1522640062E6FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41847A81C18240700C5460D /* ReceiveViewController.xib in Resources */,
+				D41847AF1C192F9000C5460D /* SendViewController.xib in Resources */,
+				D4839A671C1522640062E6FF /* LaunchScreen.storyboard in Resources */,
+				D4839A641C1522640062E6FF /* Assets.xcassets in Resources */,
+				D4839A621C1522640062E6FF /* Main.storyboard in Resources */,
+				D4F95F861C1ECD8A007E910F /* SendTableViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4839A6B1C1522640062E6FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4839A761C1522640062E6FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E614BA3CAD0CB0BFE4C0DC4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F269919C61F2BADD69A09F2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Juma BLE Helper/Pods-Juma BLE Helper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B65D620CB75AD18B26EEE92B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Juma BLE Helper/Pods-Juma BLE Helper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4839A501C1522640062E6FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41847AE1C192F9000C5460D /* SendViewController.m in Sources */,
+				D4839AC01C1535A50062E6FF /* NSTimer+Category.m in Sources */,
+				D41847981C167B0600C5460D /* JumaDataModel.m in Sources */,
+				D41847A71C18240700C5460D /* ReceiveViewController.m in Sources */,
+				D418479B1C16D2FB00C5460D /* HexadecimalTextField.m in Sources */,
+				D4F95F851C1ECD8A007E910F /* SendTableViewController.m in Sources */,
+				D41847911C1587BC00C5460D /* SendCell.m in Sources */,
+				D41847B21C194C6000C5460D /* ReceiveHUD.m in Sources */,
+				D4839A941C1528EF0062E6FF /* ScannedDevicesTableViewController.m in Sources */,
+				D4839A5C1C1522640062E6FF /* AppDelegate.m in Sources */,
+				D4839A971C1529150062E6FF /* ScannedDevicesCell.m in Sources */,
+				D4839AC81C1535A50062E6FF /* UIViewController+Category.m in Sources */,
+				D4839ABF1C1535A50062E6FF /* NSString+Category.m in Sources */,
+				D4839ABA1C1535A50062E6FF /* NSArray+Block.m in Sources */,
+				D4839A591C1522640062E6FF /* main.m in Sources */,
+				D4839AC51C1535A50062E6FF /* UIColor+Category.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4839A691C1522640062E6FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4839A721C1522640062E6FF /* Juma_BLE_HelperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4839A741C1522640062E6FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4839A7D1C1522640062E6FF /* Juma_BLE_HelperUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4839A6F1C1522640062E6FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4839A531C1522640062E6FF /* Juma BLE Helper */;
+			targetProxy = D4839A6E1C1522640062E6FF /* PBXContainerItemProxy */;
+		};
+		D4839A7A1C1522640062E6FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4839A531C1522640062E6FF /* Juma BLE Helper */;
+			targetProxy = D4839A791C1522640062E6FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4839A601C1522640062E6FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4839A611C1522640062E6FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4839A651C1522640062E6FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4839A661C1522640062E6FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4839A7F1C1522640062E6FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4839A801C1522640062E6FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4839A821C1522640062E6FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A87A72AD03A7BFEB8475AA5B /* Pods-Juma BLE Helper.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Juma BLE Helper/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jumacc.JumaSDKHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4839A831C1522640062E6FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 955AF330F539F25FA7983AB3 /* Pods-Juma BLE Helper.release.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Juma BLE Helper/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jumacc.JumaSDKHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D4839A851C1522640062E6FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Juma BLE HelperTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.Juma-BLE-HelperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Juma BLE Helper.app/Juma BLE Helper";
+			};
+			name = Debug;
+		};
+		D4839A861C1522640062E6FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Juma BLE HelperTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.Juma-BLE-HelperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Juma BLE Helper.app/Juma BLE Helper";
+			};
+			name = Release;
+		};
+		D4839A881C1522640062E6FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Juma BLE HelperUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.Juma-BLE-HelperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Juma BLE Helper";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D4839A891C1522640062E6FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Juma BLE HelperUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.Juma-BLE-HelperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Juma BLE Helper";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4839A4F1C1522640062E6FF /* Build configuration list for PBXProject "Juma BLE Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4839A7F1C1522640062E6FF /* Debug */,
+				D4839A801C1522640062E6FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4839A811C1522640062E6FF /* Build configuration list for PBXNativeTarget "Juma BLE Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4839A821C1522640062E6FF /* Debug */,
+				D4839A831C1522640062E6FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4839A841C1522640062E6FF /* Build configuration list for PBXNativeTarget "Juma BLE HelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4839A851C1522640062E6FF /* Debug */,
+				D4839A861C1522640062E6FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4839A871C1522640062E6FF /* Build configuration list for PBXNativeTarget "Juma BLE HelperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4839A881C1522640062E6FF /* Debug */,
+				D4839A891C1522640062E6FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4839A4C1C1522640062E6FF /* Project object */;
+}

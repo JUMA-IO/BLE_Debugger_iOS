@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendViewController">
+            <connections>
+                <outlet property="disconnectBarButtonItem" destination="5k7-FA-6MQ" id="Xkh-qG-OuR"/>
+                <outlet property="toolBar" destination="XLy-SH-AV5" id="2dF-CL-oPQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLy-SH-AV5">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <animations/>
+                    <items>
+                        <barButtonItem title="disconnect" id="5k7-FA-6MQ">
+                            <connections>
+                                <action selector="disconnect:" destination="-1" id="THD-b4-DzH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="nky-i7-RfC"/>
+                        <barButtonItem title="Reception History" id="PPP-j8-rXN">
+                            <connections>
+                                <action selector="viewReceptionHistory" destination="-1" id="hRL-aA-3ab"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XLy-SH-AV5" secondAttribute="trailing" id="E9i-YR-xNE"/>
+                <constraint firstAttribute="bottom" secondItem="XLy-SH-AV5" secondAttribute="bottom" id="aBY-nR-cPT"/>
+                <constraint firstItem="XLy-SH-AV5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oCE-zc-54t"/>
+            </constraints>
+            <point key="canvasLocation" x="40" y="387"/>
+        </view>
+    </objects>
+</document>
