@@ -89,19 +89,31 @@
         <!--Root View Controller-->
         <scene sceneID="5kH-tX-1CX">
             <objects>
-                <tableViewController id="3H2-T9-X0S" sceneMemberID="viewController">
+                <tableViewController id="3H2-T9-X0S" customClass="MoreViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dp9-vI-kgJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gSJ-6V-rhG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="url" textLabel="pRA-5f-5fB" style="IBUITableViewCellStyleDefault" id="gSJ-6V-rhG">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gSJ-6V-rhG" id="Syd-l8-axx">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pRA-5f-5fB">
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ztB-OJ-o03" kind="show" id="siX-QW-VzF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -114,6 +126,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wp-SR-4gn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="460" y="1168"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="8Qx-Ks-Xrv">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="ztB-OJ-o03" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xe8-Q1-oLQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="NHv-CX-Rgx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dFj-bw-leV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5y-cy-sNr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E5y-cy-sNr" firstAttribute="leading" secondItem="dFj-bw-leV" secondAttribute="leading" id="1dU-xe-3Yu"/>
+                            <constraint firstItem="NHv-CX-Rgx" firstAttribute="top" secondItem="E5y-cy-sNr" secondAttribute="bottom" id="9VI-MN-cx5"/>
+                            <constraint firstAttribute="trailing" secondItem="E5y-cy-sNr" secondAttribute="trailing" id="VFa-A8-gGl"/>
+                            <constraint firstItem="E5y-cy-sNr" firstAttribute="top" secondItem="Xe8-Q1-oLQ" secondAttribute="bottom" id="ahW-cq-9A0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="E5y-cy-sNr" id="sFM-hV-jpO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O3a-RQ-AdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="1167"/>
         </scene>
         <!--More-->
         <scene sceneID="D3X-X7-fS9">

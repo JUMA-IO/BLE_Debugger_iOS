@@ -32,6 +32,8 @@
 		D4839AC01C1535A50062E6FF /* NSTimer+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839AA81C1535A50062E6FF /* NSTimer+Category.m */; };
 		D4839AC51C1535A50062E6FF /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839AB31C1535A50062E6FF /* UIColor+Category.m */; };
 		D4839AC81C1535A50062E6FF /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839AB91C1535A50062E6FF /* UIViewController+Category.m */; };
+		D494E0B51C86ECB40045B81C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D494E0B41C86ECB40045B81C /* WebViewController.m */; };
+		D49BD8A21C86E9FC00436490 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49BD8A11C86E9FC00436490 /* MoreViewController.m */; };
 		D4F95F851C1ECD8A007E910F /* SendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F95F831C1ECD8A007E910F /* SendTableViewController.m */; };
 		D4F95F861C1ECD8A007E910F /* SendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F95F841C1ECD8A007E910F /* SendTableViewController.xib */; };
 /* End PBXBuildFile section */
@@ -102,6 +104,10 @@
 		D4839AB31C1535A50062E6FF /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 		D4839AB81C1535A50062E6FF /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
 		D4839AB91C1535A50062E6FF /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
+		D494E0B31C86ECB40045B81C /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		D494E0B41C86ECB40045B81C /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		D49BD8A01C86E9FC00436490 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		D49BD8A11C86E9FC00436490 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D4F95F821C1ECD8A007E910F /* SendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendTableViewController.h; sourceTree = "<group>"; };
 		D4F95F831C1ECD8A007E910F /* SendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendTableViewController.m; sourceTree = "<group>"; };
 		D4F95F841C1ECD8A007E910F /* SendTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendTableViewController.xib; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 				D4839A911C1528270062E6FF /* Scanned Devices */,
 				D4839AC91C1563580062E6FF /* Send Data */,
 				D418479F1C1801A200C5460D /* Receive */,
+				D494E0B61C86EE310045B81C /* More */,
 				D4839A631C1522640062E6FF /* Assets.xcassets */,
 				D4839A651C1522640062E6FF /* LaunchScreen.storyboard */,
 				D4839A681C1522640062E6FF /* Info.plist */,
@@ -302,6 +309,17 @@
 				D41847B11C194C6000C5460D /* ReceiveHUD.m */,
 			);
 			name = "Send Data";
+			sourceTree = "<group>";
+		};
+		D494E0B61C86EE310045B81C /* More */ = {
+			isa = PBXGroup;
+			children = (
+				D49BD8A01C86E9FC00436490 /* MoreViewController.h */,
+				D49BD8A11C86E9FC00436490 /* MoreViewController.m */,
+				D494E0B31C86ECB40045B81C /* WebViewController.h */,
+				D494E0B41C86ECB40045B81C /* WebViewController.m */,
+			);
+			name = More;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,9 +516,11 @@
 				D41847911C1587BC00C5460D /* SendCell.m in Sources */,
 				D41847B21C194C6000C5460D /* ReceiveHUD.m in Sources */,
 				D4839A941C1528EF0062E6FF /* ScannedDevicesTableViewController.m in Sources */,
+				D49BD8A21C86E9FC00436490 /* MoreViewController.m in Sources */,
 				D4839A5C1C1522640062E6FF /* AppDelegate.m in Sources */,
 				D4839A971C1529150062E6FF /* ScannedDevicesCell.m in Sources */,
 				D4839AC81C1535A50062E6FF /* UIViewController+Category.m in Sources */,
+				D494E0B51C86ECB40045B81C /* WebViewController.m in Sources */,
 				D4839ABF1C1535A50062E6FF /* NSString+Category.m in Sources */,
 				D4839ABA1C1535A50062E6FF /* NSArray+Block.m in Sources */,
 				D4839A591C1522640062E6FF /* main.m in Sources */,
