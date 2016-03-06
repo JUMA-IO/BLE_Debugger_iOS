@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "SendTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-//    self.window.rootViewController = [[SendTableViewController alloc] init];
+    
+    UITabBarItem *item = [UITabBarItem appearance];
+    [item setTitlePositionAdjustment:UIOffsetMake(0, -10)];
+    [item setTitleTextAttributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:13] }
+                        forState:UIControlStateNormal];
+    
     return YES;
 }
 

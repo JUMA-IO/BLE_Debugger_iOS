@@ -165,6 +165,7 @@
     [self hideConnectHUD];
     
     SendViewController *sendVC = [[SendViewController alloc] init];
+    sendVC.hidesBottomBarWhenPushed = YES;
     sendVC.manager = manager;
     sendVC.device = device;
     sendVC.title = device.name;
