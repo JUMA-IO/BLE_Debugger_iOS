@@ -55,7 +55,7 @@ static const NSInteger kCountForDisableLabels = 5;
             [self setupLabels];
         }
     }
-    
+#if !SCREENSHOT_MODE
     if (self.timer == nil) {
         
         __weak typeof(self) weakSelf = self;
@@ -65,6 +65,7 @@ static const NSInteger kCountForDisableLabels = 5;
             [self setupLabels];
         }];
     }
+#endif
 }
 
 - (void)setupLabels {

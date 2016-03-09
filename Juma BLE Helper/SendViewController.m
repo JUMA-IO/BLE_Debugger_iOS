@@ -120,6 +120,9 @@
     NSData *data = dataModel.content.dataValue;
     unsigned char type = strtoul(dataModel.type.UTF8String, 0, 16);
     
+#if SCREENSHOT_MODE
+    [self device:nil didUpdateData:data type:type error:nil];
+#else
     [self.device writeData:data type:type];
     [self.HUD show:YES];
     
@@ -129,6 +132,7 @@
         
         [self hideHUDWithError:@"timeout"];
     }];
+#endif
 }
 
 - (void)hideHUDWithError:(NSString *)error {
@@ -170,7 +174,9 @@
     
     [self.receivedDataModels addObject:model];
     [self.receiveHUD appendModel:model];
+#if !SCREENSHOT_MODE
     [self.receiveHUD show:YES];
+#endif
     self.sendBarButtonItem.enabled = NO;
     
     if (self.navigationController.visibleViewController == self.receiveVC) {

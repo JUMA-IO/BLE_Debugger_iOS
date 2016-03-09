@@ -10,6 +10,7 @@
 #import "ScannedDevicesCell.h"
 #import "SendViewController.h"
 #import "JumaConfig.h"
+#import "FakeDevice.h"
 
 #import "NSArray+Block.h"
 #import "NSTimer+Category.h"
@@ -34,13 +35,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // print the version string of JumaBluetoothSDK
     NSLog(@"JumaBluetoothSDKVersionString = %@", JumaBluetoothSDKVersionString);
     
+#if SCREENSHOT_MODE
+    self.devices = @[
+                     @{ [FakeDevice deviceWithName:@"567c" UUID:@"971328CE-F329-A4BA-87A0-36FCC2658A74"] : @(-50) },
+                     @{ [FakeDevice deviceWithName:@"shuwen" UUID:@"909DF33D-9E9F-2CED-CA8D-121A35B96CC1"] : @(-73) },
+                     @{ [FakeDevice deviceWithName:@"Mesh_Host" UUID:@"F5A4420E-2815-92A4-4A3D-30D5ACCA1012"] : @(-37) }
+                     ].mutableCopy;
+#else
     self.manager = [[JumaManager alloc] initWithDelegate:self queue:nil options:nil];
+    self.devices = [NSMutableArray array];
+#endif
     
-    self.devices = @[].mutableCopy;
 }
 
 - (void)scan {
@@ -221,11 +229,15 @@
 #pragma mark - <UITableViewDelegate>
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
     self.view.userInteractionEnabled = NO;
     
     JumaDevice *device = self.devices[indexPath.row].allKeys.firstObject;
+#if SCREENSHOT_MODE
+    [self manager:nil didConnectDevice:device];
+#else
     [self.manager connectDevice:device];
+#endif
     
     self.connectHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.connectHUD.dimBackground = YES;
