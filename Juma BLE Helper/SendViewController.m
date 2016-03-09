@@ -118,8 +118,11 @@
     
     JumaDataModel *dataModel = self.tableViewController.selectedDataModel;
     NSData *data = dataModel.content.dataValue;
-    unsigned char type = (unsigned int)dataModel.type.intValue;
+    unsigned char type = strtoul(dataModel.type.UTF8String, 0, 16);
     
+#if SCREENSHOT_MODE
+    [self device:nil didUpdateData:data type:type error:nil];
+#else
     [self.device writeData:data type:type];
     [self.HUD show:YES];
     
@@ -129,6 +132,7 @@
         
         [self hideHUDWithError:@"timeout"];
     }];
+#endif
 }
 
 - (void)hideHUDWithError:(NSString *)error {
@@ -156,7 +160,7 @@
 }
 
 - (void)device:(JumaDevice *)device didUpdateData:(NSData *)data type:(const char)typeCode error:(NSError *)error {
-    
+    JMLog(@"%02x -> %@", typeCode, data);
     JumaDataModel *model = [[JumaDataModel alloc] init];
     
     if (error == nil) {
@@ -170,7 +174,9 @@
     
     [self.receivedDataModels addObject:model];
     [self.receiveHUD appendModel:model];
+#if !SCREENSHOT_MODE
     [self.receiveHUD show:YES];
+#endif
     self.sendBarButtonItem.enabled = NO;
     
     if (self.navigationController.visibleViewController == self.receiveVC) {

@@ -10,6 +10,7 @@
 #import "JumaDataModel.h"
 #import "HexadecimalTextField.h"
 #import "NSArray+Block.h"
+#import "JumaConfig.h"
 #import <Masonry.h>
 
 @interface SendCell () <UITextFieldDelegate>
@@ -83,7 +84,19 @@
     else { // type in character
         
         if (textField == self.typeTextField) {
-            return textField.text.length < 2;
+            string = [(textField.text ?: @"") stringByAppendingString:string];
+            unsigned char type = strtoul(string.UTF8String, NULL, 16);
+            JMLog(@"string = %@, -> 0x%02x", string, type);
+
+            if (type < 0x80) {
+                return textField.text.length < 2;
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"type should be less than 0x80" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
+                
+                textField.text = nil;
+                return NO;
+            }
         }
         else {
             NSCharacterSet *set = [HexadecimalTextField invertedHexadecimalSet];

@@ -16,6 +16,7 @@
 		D41847AE1C192F9000C5460D /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41847AC1C192F9000C5460D /* SendViewController.m */; };
 		D41847AF1C192F9000C5460D /* SendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41847AD1C192F9000C5460D /* SendViewController.xib */; };
 		D41847B21C194C6000C5460D /* ReceiveHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D41847B11C194C6000C5460D /* ReceiveHUD.m */; };
+		D41B447F1C901B8400E7CEA5 /* FakeDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B447E1C901B8400E7CEA5 /* FakeDevice.m */; };
 		D4839A591C1522640062E6FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839A581C1522640062E6FF /* main.m */; };
 		D4839A5C1C1522640062E6FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4839A5B1C1522640062E6FF /* AppDelegate.m */; };
 		D4839A621C1522640062E6FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4839A601C1522640062E6FF /* Main.storyboard */; };
@@ -73,6 +74,9 @@
 		D41847AD1C192F9000C5460D /* SendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendViewController.xib; sourceTree = "<group>"; };
 		D41847B01C194C6000C5460D /* ReceiveHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveHUD.h; sourceTree = "<group>"; };
 		D41847B11C194C6000C5460D /* ReceiveHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveHUD.m; sourceTree = "<group>"; };
+		D41B44791C9017ED00E7CEA5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D41B447D1C901B8400E7CEA5 /* FakeDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeDevice.h; sourceTree = "<group>"; };
+		D41B447E1C901B8400E7CEA5 /* FakeDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeDevice.m; sourceTree = "<group>"; };
 		D4839A541C1522640062E6FF /* Juma BLE Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Juma BLE Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4839A581C1522640062E6FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4839A5A1C1522640062E6FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 			children = (
 				D4839A981C152F760062E6FF /* JumaConfig.h */,
 				D4839A581C1522640062E6FF /* main.m */,
+				D41B44791C9017ED00E7CEA5 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -254,6 +259,8 @@
 				D4839A931C1528EF0062E6FF /* ScannedDevicesTableViewController.m */,
 				D4839A951C1529150062E6FF /* ScannedDevicesCell.h */,
 				D4839A961C1529150062E6FF /* ScannedDevicesCell.m */,
+				D41B447D1C901B8400E7CEA5 /* FakeDevice.h */,
+				D41B447E1C901B8400E7CEA5 /* FakeDevice.m */,
 			);
 			name = "Scanned Devices";
 			sourceTree = "<group>";
@@ -392,7 +399,6 @@
 				TargetAttributes = {
 					D4839A531C1522640062E6FF = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = X58N745X9P;
 					};
 					D4839A6C1C1522640062E6FF = {
 						CreatedOnToolsVersion = 7.1;
@@ -509,6 +515,7 @@
 			files = (
 				D41847AE1C192F9000C5460D /* SendViewController.m in Sources */,
 				D4839AC01C1535A50062E6FF /* NSTimer+Category.m in Sources */,
+				D41B447F1C901B8400E7CEA5 /* FakeDevice.m in Sources */,
 				D41847981C167B0600C5460D /* JumaDataModel.m in Sources */,
 				D41847A71C18240700C5460D /* ReceiveViewController.m in Sources */,
 				D418479B1C16D2FB00C5460D /* HexadecimalTextField.m in Sources */,
@@ -672,15 +679,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Juma BLE Helper/PrefixHeader.pch";
 				INFOPLIST_FILE = "Juma BLE Helper/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jumacc.JumaSDKHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -695,15 +706,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Juma BLE Helper/PrefixHeader.pch";
 				INFOPLIST_FILE = "Juma BLE Helper/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jumacc.JumaSDKHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
