@@ -118,7 +118,7 @@
     
     JumaDataModel *dataModel = self.tableViewController.selectedDataModel;
     NSData *data = dataModel.content.dataValue;
-    unsigned char type = (unsigned int)dataModel.type.intValue;
+    unsigned char type = strtoul(dataModel.type.UTF8String, 0, 16);
     
     [self.device writeData:data type:type];
     [self.HUD show:YES];
