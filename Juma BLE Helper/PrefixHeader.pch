@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  Juma BLE Helper
+//
+//  Created by 汪安军 on 16/3/9.
+//  Copyright © 2016年 JUMA. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifndef SCREENSHOT_MODE
+#define SCREENSHOT_MODE 1
+#endif
+
+#endif /* PrefixHeader_pch */
