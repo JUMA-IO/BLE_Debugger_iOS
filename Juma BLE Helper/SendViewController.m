@@ -156,7 +156,7 @@
 }
 
 - (void)device:(JumaDevice *)device didUpdateData:(NSData *)data type:(const char)typeCode error:(NSError *)error {
-    
+    JMLog(@"%02x -> %@", typeCode, data);
     JumaDataModel *model = [[JumaDataModel alloc] init];
     
     if (error == nil) {
