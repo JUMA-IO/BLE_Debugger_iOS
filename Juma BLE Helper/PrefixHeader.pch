@@ -11,7 +11,7 @@
 
 // 处在截图模式时, 会用假数据填充 app, 方便截取 iTunes connect 需要的图片
 #ifndef SCREENSHOT_MODE
-#define SCREENSHOT_MODE 1
+#define SCREENSHOT_MODE 0
 #endif
 
 #endif /* PrefixHeader_pch */
