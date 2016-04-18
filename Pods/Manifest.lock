@@ -1,0 +1,16 @@
+PODS:
+  - Masonry (0.6.3)
+  - MBProgressHUD (0.9.1)
+  - MJExtension (3.0.7)
+
+DEPENDENCIES:
+  - Masonry (~> 0.6.3)
+  - MBProgressHUD (~> 0.9.1)
+  - MJExtension (~> 3.0.7)
+
+SPEC CHECKSUMS:
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MJExtension: 290cc966f0f849b12b6391a38e296e0004ae8e5e
+
+COCOAPODS: 0.39.0
